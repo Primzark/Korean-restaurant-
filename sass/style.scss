@@ -1,0 +1,83 @@
+/* Variables */
+$primary-color: #007bff;
+$dark-color: #343a40;
+
+/* Global Styles */
+body {
+    font-size: 1rem; // Base font size in REM
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    font-size: 1.2rem;
+
+    &.sticky-top {
+        background-color: $dark-color;
+        transition: box-shadow 0.3s ease;
+        &.shadow {
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+    }
+}
+
+/* Carousel */
+.carousel {
+    .carousel-inner {
+        .carousel-img {
+            height: 20rem; // Consistent height for images
+            object-fit: cover;
+        }
+    }
+
+    .carousel-caption {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 1rem;
+        border-radius: 0.5rem;
+
+        h5,
+        p {
+            margin: 0;
+        }
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        filter: brightness(0) invert(1); // Contrast for arrows
+    }
+}
+
+/* Menu Section */
+#menu {
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        color: $primary-color;
+    }
+
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+        }
+
+        .card-text {
+            font-size: 1rem;
+        }
+    }
+}
+
+/* Footer */
+footer {
+    font-size: 1rem;
+    line-height: 1.5;
+}
