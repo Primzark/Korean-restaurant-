@@ -11,6 +11,29 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* Contact Section with Google Map */
+#contact .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.google-map iframe {
+    border-radius: 8px; /* Add rounded corners for the map */
+}
+
+/* Styling for the Contact Form and Map */
+#contact form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact .col-md-6 {
+    margin-bottom: 2rem;
+}
+
+
 /* Navbar */
 .navbar {
     font-size: 1.2rem;
