@@ -8,6 +8,18 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.card-body .badge {
+  font-size: 1rem; /* Larger font size */
+  padding: 0.6rem 1rem; /* Adjust for larger appearance */
+  display: inline-block; /* Ensures alignment is preserved */
+}
+
+.btn-info {
+  font-size: 3.125rem; /* Converted to REM (5rem = 80px -> 3.125rem ~ 50px) */
+  padding: 0.2rem 0.6rem;
+  margin-left: 2.5rem; /* margin adjusted for rem unit */
+}
+
 /* Contact Section with Google Map */
 #contact .row {
   display: flex;
@@ -15,15 +27,15 @@ body {
 }
 
 .google-map iframe {
-  border-radius: 8px; /* Add rounded corners for the map */
+  border-radius: 0.5rem; /* Add rounded corners for the map */
 }
 
 /* Styling for the Contact Form and Map */
 #contact form {
   background-color: #fff;
   padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 #contact .col-md-6 {
@@ -35,7 +47,7 @@ body {
   font-size: 1.2rem;
 }
 .navbar.sticky-top {
-  background-color: #343a40;
+  background-color: 2.2rem;
   transition: box-shadow 0.3s ease;
 }
 .navbar.sticky-top.shadow {
@@ -44,7 +56,7 @@ body {
 
 /* Carousel */
 .carousel .carousel-inner .carousel-img {
-  height: 20rem;
+  height: 12.5rem; /* 20rem -> 12.5rem */
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -64,43 +76,44 @@ body {
 
 /* Menu Section */
 #menu h2 {
-  font-size: 2rem;
+  font-size: 1.75rem; /* 2rem -> 1.75rem */
   margin-bottom: 2rem;
-  color: #007bff;
+  color: 0.5rem;
 }
 #menu .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 #menu .card:hover {
   transform: translateY(-0.5rem);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
 }
 #menu .card .card-title {
-  font-size: 1.4rem;
+  font-size: 1.4rem; /* Adjust card title size */
 }
 #menu .card .card-text {
-  font-size: 1rem;
+  font-size: 1rem; /* Text size consistency */
 }
 
 /* Footer */
 footer {
   font-size: 1rem;
   line-height: 1.5;
+  margin-bottom: auto;
 }
 
 /* General Style for Section Titles */
 h3 {
   position: relative;
-  font-size: 2rem;
+  font-size: 2rem; /* 2rem */
   font-weight: bold;
   text-align: center;
-  color: #333;
+  color: #333; /* Dark grey text color */
   padding: 1rem;
   margin-bottom: 2rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625rem; /* 1px to rem */
   background-color: #f9f9f9;
-  border-radius: 8px;
+  border-radius: 0.5rem; /* 8px to rem */
   transition: all 0.3s ease-in-out;
 }
 
@@ -108,7 +121,7 @@ h3 {
 h3:hover {
   color: #fff;
   background-color: #ff6f61;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1); /* Slight shadow */
 }
 
 /* Underline Animation */
@@ -119,7 +132,7 @@ h3::before {
   left: 50%;
   transform: translateX(-50%);
   width: 0;
-  height: 3px;
+  height: 0.1875rem; /* 3px to rem */
   background-color: #ff6f61;
   transition: width 0.3s ease-in-out;
 }
@@ -142,19 +155,19 @@ section {
 
 /* Styling the Cards (Food Items) */
 .card {
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.625rem); /* 10px to rem */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .card-img-top {
-  border-radius: 8px 8px 0 0;
-  height: 200px;
+  border-radius: 0.5rem 0.5rem 0 0;
+  height: 12.5rem; /* 200px to rem */
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -167,18 +180,18 @@ section {
 }
 
 .card-title {
-  font-size: 1.2rem;
+  font-size: 1.2rem; /* 1.2rem */
   font-weight: bold;
   color: #333;
 }
 
 .card-text {
-  font-size: 1rem;
-  color: #777;
+  font-size: 1rem; /* 1rem */
+  color: #777; /* Slightly lighter text for descriptions */
 }
 
 /* Responsive Design Adjustments */
-@media (max-width: 767px) {
+@media (max-width: 48rem) { /* 767px to rem */
   h3 {
     font-size: 1.5rem;
     padding: 0.5rem;

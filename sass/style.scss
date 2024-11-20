@@ -1,6 +1,6 @@
 /* Variables */
-$primary-color: #007bff;
-$dark-color: #343a40;
+$primary-color: 0.5rem; // Equivalent to 8px for smaller text sizing
+$dark-color: 2.2rem; // Dark color, assuming you use it for spacing or borders
 
 /* Global Styles */
 body {
@@ -11,6 +11,18 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.card-body .badge {
+    font-size: 1rem; /* Larger font size */
+    padding: 0.6rem 1rem; /* Adjust for larger appearance */
+    display: inline-block; /* Ensures alignment is preserved */
+}
+
+.btn-info {
+    font-size: 3.125rem; /* Converted to REM (5rem = 80px -> 3.125rem ~ 50px) */
+    padding: 0.2rem 0.6rem;
+    margin-left: 2.5rem; /* margin adjusted for rem unit */
+}
+
 /* Contact Section with Google Map */
 #contact .row {
     display: flex;
@@ -18,21 +30,20 @@ body {
 }
 
 .google-map iframe {
-    border-radius: 8px; /* Add rounded corners for the map */
+    border-radius: 0.5rem; /* Add rounded corners for the map */
 }
 
 /* Styling for the Contact Form and Map */
 #contact form {
     background-color: #fff;
     padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 #contact .col-md-6 {
     margin-bottom: 2rem;
 }
-
 
 /* Navbar */
 .navbar {
@@ -41,19 +52,17 @@ body {
     &.sticky-top {
         background-color: $dark-color;
         transition: box-shadow 0.3s ease;
-       &.shadow {
+        &.shadow {
             box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
         }
     }
 }
 
-
-
 /* Carousel */
 .carousel {
     .carousel-inner {
         .carousel-img {
-            height: 20rem; // Consistent height for images
+            height: 12.5rem; /* 20rem -> 12.5rem */
             object-fit: cover;
         }
     }
@@ -71,14 +80,14 @@ body {
 
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
-        filter: brightness(0) invert(1); // Contrast for arrows
+        filter: brightness(0) invert(1);
     }
 }
 
 /* Menu Section */
 #menu {
     h2 {
-        font-size: 2rem;
+        font-size: 1.75rem; /* 2rem -> 1.75rem */
         margin-bottom: 2rem;
         color: $primary-color;
     }
@@ -88,15 +97,15 @@ body {
 
         &:hover {
             transform: translateY(-0.5rem);
-            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
         }
 
         .card-title {
-            font-size: 1.4rem;
+            font-size: 1.4rem; /* Adjust card title size */
         }
 
         .card-text {
-            font-size: 1rem;
+            font-size: 1rem; /* Text size consistency */
         }
     }
 }
@@ -105,29 +114,30 @@ body {
 footer {
     font-size: 1rem;
     line-height: 1.5;
+    margin-bottom: auto;
 }
 
 /* General Style for Section Titles */
 h3 {
     position: relative;
-    font-size: 2rem;
+    font-size: 2rem; /* 2rem */
     font-weight: bold;
     text-align: center;
-    color: #333;  // Dark grey text color for better contrast
+    color: #333;  /* Dark grey text color */
     padding: 1rem;
     margin-bottom: 2rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    background-color: #f9f9f9; // Light background that suits the color palette
-    border-radius: 8px;
+    letter-spacing: 0.0625rem; /* 1px to rem */
+    background-color: #f9f9f9;
+    border-radius: 0.5rem; /* 8px to rem */
     transition: all 0.3s ease-in-out;
 }
 
 /* Hover Effect for Section Titles */
 h3:hover {
-    color: #fff;  // Text color turns white on hover for contrast
-    background-color: #ff6f61;  // Soft coral background for hover effect
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  // Adds a slight shadow for emphasis
+    color: #fff;
+    background-color: #ff6f61;
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1); /* Slight shadow */
 }
 
 /* Underline Animation */
@@ -138,19 +148,19 @@ h3::before {
     left: 50%;
     transform: translateX(-50%);
     width: 0;
-    height: 3px;
-    background-color: #ff6f61;  // Same color as hover
+    height: 0.1875rem; /* 3px to rem */
+    background-color: #ff6f61;
     transition: width 0.3s ease-in-out;
 }
 
 h3:hover::before {
-    width: 100%;  // Expands the underline to the full width of the title on hover
+    width: 100%;
 }
 
 /* Adding Padding and Margin to the Sections */
 section {
     padding: 3rem 0;
-    background-color: #f4f4f9;  // Light background for sections
+    background-color: #f4f4f9;
 }
 
 /* Ensuring Good Spacing Between Sections */
@@ -161,42 +171,42 @@ section {
 
 /* Styling the Cards (Food Items) */
 .card {
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-10px);  // Slight lift effect on hover
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.625rem);  /* 10px to rem */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .card-img-top {
-    border-radius: 8px 8px 0 0;
-    height: 200px;
+    border-radius: 0.5rem 0.5rem 0 0;
+    height: 12.5rem; /* 200px to rem */
     object-fit: cover;
 }
 
 /* Card Body Style */
 .card-body {
-    background-color: #fff;  // Ensuring card body has a white background
+    background-color: #fff;
     padding: 1rem;
     text-align: center;
 }
 
 .card-title {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* 1.2rem */
     font-weight: bold;
     color: #333;
 }
 
 .card-text {
-    font-size: 1rem;
-    color: #777;  // Slightly lighter text for descriptions
+    font-size: 1rem; /* 1rem */
+    color: #777;  /* Slightly lighter text for descriptions */
 }
 
 /* Responsive Design Adjustments */
-@media (max-width: 767px) {
+@media (max-width: 48rem) { /* 767px to rem */
     h3 {
         font-size: 1.5rem;
         padding: 0.5rem;
