@@ -64,4 +64,104 @@ body {
 footer {
   font-size: 1rem;
   line-height: 1.5;
+}
+
+/* General Style for Section Titles */
+h3 {
+  position: relative;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect for Section Titles */
+h3:hover {
+  color: #fff;
+  background-color: #ff6f61;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Underline Animation */
+h3::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background-color: #ff6f61;
+  transition: width 0.3s ease-in-out;
+}
+
+h3:hover::before {
+  width: 100%;
+}
+
+/* Adding Padding and Margin to the Sections */
+section {
+  padding: 3rem 0;
+  background-color: #f4f4f9;
+}
+
+/* Ensuring Good Spacing Between Sections */
+#menu .container {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+/* Styling the Cards (Food Items) */
+.card {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  border-radius: 8px 8px 0 0;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Card Body Style */
+.card-body {
+  background-color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 767px) {
+  h3 {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+  .card {
+    margin-bottom: 2rem;
+  }
 }/*# sourceMappingURL=style.css.map */

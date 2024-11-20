@@ -18,11 +18,13 @@ body {
     &.sticky-top {
         background-color: $dark-color;
         transition: box-shadow 0.3s ease;
-        &.shadow {
+       &.shadow {
             box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
         }
     }
 }
+
+
 
 /* Carousel */
 .carousel {
@@ -80,4 +82,104 @@ body {
 footer {
     font-size: 1rem;
     line-height: 1.5;
+}
+
+/* General Style for Section Titles */
+h3 {
+    position: relative;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #333;  // Dark grey text color for better contrast
+    padding: 1rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: #f9f9f9; // Light background that suits the color palette
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect for Section Titles */
+h3:hover {
+    color: #fff;  // Text color turns white on hover for contrast
+    background-color: #ff6f61;  // Soft coral background for hover effect
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  // Adds a slight shadow for emphasis
+}
+
+/* Underline Animation */
+h3::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background-color: #ff6f61;  // Same color as hover
+    transition: width 0.3s ease-in-out;
+}
+
+h3:hover::before {
+    width: 100%;  // Expands the underline to the full width of the title on hover
+}
+
+/* Adding Padding and Margin to the Sections */
+section {
+    padding: 3rem 0;
+    background-color: #f4f4f9;  // Light background for sections
+}
+
+/* Ensuring Good Spacing Between Sections */
+#menu .container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+/* Styling the Cards (Food Items) */
+.card {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);  // Slight lift effect on hover
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    border-radius: 8px 8px 0 0;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Card Body Style */
+.card-body {
+    background-color: #fff;  // Ensuring card body has a white background
+    padding: 1rem;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #777;  // Slightly lighter text for descriptions
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 767px) {
+    h3 {
+        font-size: 1.5rem;
+        padding: 0.5rem;
+    }
+
+    .card {
+        margin-bottom: 2rem;
+    }
 }
