@@ -11,18 +11,16 @@
 <body>
     
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">KOREAN VIBE</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow" data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="70">
+        <div class="container">
+            <!-- Navbar Toggler for mobile views -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+      
+            <!-- Left side: Menu and Contact Links (Visible on Desktop) -->
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" href="#menu">Menu</a>
                     </li>
@@ -31,9 +29,28 @@
                     </li>
                 </ul>
             </div>
+      
+            <!-- Center: Logo and Title (KOREAN VIBE) -->
+            <a class="navbar-brand mx-auto" href="#">
+                <img src="/image/Logo.webp" alt="Logo" class="img-fluid" style="max-width: 4rem;">
+                KOREAN VIBE
+            </a>
         </div>
     </nav>
+    
+    <!-- Hero Section -->
+    <header id="hero" class="text-center py-5">
+        <!-- Carousel code here -->
+    </header>
+    
+    <!-- Other content sections -->
+    <section id="menu" class="menu-section py-5">
+        <!-- Menu section content here -->
+    </section>
+    
+    
 
+    
     <!-- Hero Section with Carousel -->
     <header id="hero" class="text-center py-5">
         <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
@@ -42,7 +59,7 @@
                 <div class="carousel-item active">
                     <img src="/image/Bimbimbap.jpg" class="d-block w-100 carousel-img" alt="Bibimbap">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Bibimbap</h5>
+                        <h5 class="display-4">Bibimbap</h5>
                         <p>A traditional Korean rice dish with mixed vegetables, egg, and spicy sauce.</p>
                     </div>
                 </div>
@@ -50,7 +67,7 @@
                 <div class="carousel-item">
                     <img src="/image/Bulgogi final (1).jpg" class="d-block w-100 carousel-img" alt="Bulgogi">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Bulgogi</h5>
+                        <h5 class="display-4">Bulgogi</h5>
                         <p>Grilled marinated beef served with rice and vegetables.</p>
                     </div>
                 </div>
@@ -58,7 +75,7 @@
                 <div class="carousel-item">
                     <img src="/image/Kimchi main.jpg" class="d-block w-100 carousel-img" alt="Kimchi Stew">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Kimchi Stew</h5>
+                        <h5 class="display-4">Kimchi Stew</h5>
                         <p>A spicy and flavorful stew made with fermented kimchi, tofu, and vegetables.</p>
                     </div>
                 </div>
@@ -75,10 +92,10 @@
         </div>
     </header>
 
-    <!-- Menu Section -->
+
     <section id="menu" class="menu-section py-5">
-        <!-- Menu Title with Cool Effect -->
-        <h2 class="menu-title text-center mb-5">Try our brand new Menu !</h2>
+        <h2 class="menu-title text-center mb-5">Try our brand new Menu!</h2>
+        
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
         
@@ -332,39 +349,50 @@
 
     
     
-    <!-- Contact Section -->
-    <!-- Contact Section -->
-<section id="contact" class="container my-5">
-    <h2 class="text-center mb-4">Contact Us</h2>
-    <div class="row">
-        <!-- Contact Form -->
-        <div class="col-md-6">
-            <form>
-                <div class="mb-3">
-                    <label for="name" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
-                </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea class="form-control" id="message" rows="4" placeholder="Your message"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
 
-
-        <!-- Google Map -->
-        <div class="col-md-6">
-            <div class="google-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202405.65364637633!2d126.80933037291614!3d37.56476155257702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2012d5c39cf%3A0x7e11eca1405bf29b!2sSeoul%2C%20South%20Korea!5e0!3m2!1sen!2sus!4v1732104452263!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <!-- Contact Section -->
+    <section id="contact" class="container my-5">
+        <h2 class="text-center mb-4">Contact Us</h2>
+        <div class="row">
+            <!-- Contact Form -->
+            <div class="col-12 col-md-6 d-flex">
+                <form class="w-100 d-flex flex-column justify-content-between">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Your message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+    
+            <!-- Google Map -->
+            <div class="col-12 col-md-6 d-flex">
+                <div class="google-map w-100">
+                    <div class="embed-responsive embed-responsive-16by9 h-100">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202405.65364637633!2d126.80933037291614!3d37.56476155257702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2012d5c39cf%3A0x7e11eca1405bf29b!2sSeoul%2C%20South%20Korea!5e0!3m2!1sen!2sus!4v1732104452263!5m2!1sen!2sus"
+                            class="embed-responsive-item w-100 h-100"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+    
+    
+    
+    
 
     
     
@@ -374,7 +402,7 @@
     </footer>
 
     <a href="#top" class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 mb-4 me-4" aria-label="Scroll to Top">
-        <i class="bi bi-arrow-up"></i> <!-- Bootstrap Icons for up arrow -->
+        <i class="bi bi-arrow-up"></i> 
     </a>
     
 
@@ -397,6 +425,13 @@
         });
     });
 </script>
+
+<script>
+    // Initialize ScrollSpy
+    var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+      target: '#navbarNav'
+    });
+  </script>
 
     
 
