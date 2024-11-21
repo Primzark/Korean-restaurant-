@@ -11,42 +11,37 @@
 <body>
     
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow" data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="70">
-        <div class="container">
-            <!-- Navbar Toggler for mobile views -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-      
-            <!-- Left side: Menu and Contact Links (Visible on Desktop) -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#menu">Menu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
+    <body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="70" tabindex="0">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+            <div class="container">
+                <!-- Navbar Toggler for mobile views -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+          
+                <!-- Left side: Menu and Contact Links -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#menu">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+          
+                <!-- Center: Logo and Title (KOREAN VIBE) -->
+                <a class="navbar-brand mx-auto" href="#">
+                    <img src="/image/Logo.webp" alt="Logo" class="img-fluid" style="max-width: 4rem;">
+                    KOREAN VIBE
+                </a>
             </div>
-      
-            <!-- Center: Logo and Title (KOREAN VIBE) -->
-            <a class="navbar-brand mx-auto" href="#">
-                <img src="/image/Logo.webp" alt="Logo" class="img-fluid" style="max-width: 4rem;">
-                KOREAN VIBE
-            </a>
-        </div>
+        </nav>
+
+    
     </nav>
     
-    <!-- Hero Section -->
-    <header id="hero" class="text-center py-5">
-        <!-- Carousel code here -->
-    </header>
-    
-    <!-- Other content sections -->
-    <section id="menu" class="menu-section py-5">
-        <!-- Menu section content here -->
-    </section>
     
     
 
@@ -428,8 +423,9 @@
 
 <script>
     // Initialize ScrollSpy
-    var scrollSpy = new bootstrap.ScrollSpy(document.body, {
-      target: '#navbarNav'
+    const scrollSpy = new bootstrap.ScrollSpy(document.body, {
+        target: '#navbar-example',
+        offset: 50,
     });
   </script>
 
