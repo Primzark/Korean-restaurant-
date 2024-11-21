@@ -13,7 +13,7 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">My Restaurant</a>
+            <a class="navbar-brand" href="#">KOREAN VIBE</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -78,50 +78,70 @@
     <!-- Menu Section -->
     <section id="menu" class="menu-section py-5">
         <!-- Menu Title with Cool Effect -->
-        <h2 class="menu-title text-center mb-5">Our Korean Menu</h2>
+        <h2 class="menu-title text-center mb-5">Try our brand new Menu !</h2>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
         
         <!-- Drinks Section -->
         <h3 class="text-center mb-4">Drinks</h3>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="image/Soju.jpg" class="card-img-top" alt="Soju">
-                    <div class="card-body">
-                        <h5 class="card-title">Soju</h5>
-                        <p class="card-text">Korean traditional distilled spirit made from rice, barley, or sweet potatoes.</p>
-                        <p><span class="badge bg-primary">₩4,000</span></p>
-                        <button class="btn btn-outline-dark btn-sm ml-2">+info</button>
-                        <button class="btn btn-outline-dark btn-sm ml-2">Order</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="/image/Sake.jpg" class="card-img-top" alt="Makgeolli">
-                    <div class="card-body">
-                        <h5 class="card-title">Makgeolli</h5>
-                        <p class="card-text">Traditional Korean rice wine, slightly sweet with a milky texture.</p>
-                        <p><span class="badge bg-primary">₩5,000</span></p>
-                        <button class="btn btn-outline-dark btn-sm ml-2">+info</button>
-                        <button class="btn btn-outline-dark btn-sm ml-2">Order</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="/image/Sakhe.png" class="card-img-top" alt="Sikhye">
-                    <div class="card-body">
-                        <h5 class="card-title">Sikhye</h5>
-                        <p class="card-text">Sweet traditional Korean drink made with malted barley and rice.</p>
-                        <p><span class="badge bg-primary">₩3,500</span></p>
-                        <button class="btn btn-outline-dark btn-sm ml-2">+info</button>
-                        <button class="btn btn-outline-dark btn-sm ml-2">Order</button>
-                    </div>
-                </div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <img src="image/Soju.jpg" class="card-img-top" alt="Soju">
+            <div class="card-body">
+                <h5 class="card-title">Soju</h5>
+                <p class="card-text">Korean traditional distilled spirit made from rice, barley, or sweet potatoes.</p>
+                <p><span class="badge bg-primary">₩4,000</span></p>
+                <button class="btn btn-outline-dark btn-sm ml-2" data-bs-toggle="popover" title="Ingredients" data-bs-trigger="focus" data-bs-content="Rice, Barley, Sweet Potatoes">+info</button>
+                <button class="btn btn-outline-dark btn-sm ml-2 order-btn" data-bs-toggle="modal" data-bs-target="#orderModal" data-dish="Soju">Order</button>
             </div>
         </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <img src="/image/Sake.jpg" class="card-img-top" alt="Makgeolli">
+            <div class="card-body">
+                <h5 class="card-title">Makgeolli</h5>
+                <p class="card-text">Traditional Korean rice wine, slightly sweet with a milky texture.</p>
+                <p><span class="badge bg-primary">₩5,000</span></p>
+                <button class="btn btn-outline-dark btn-sm ml-2" data-bs-toggle="popover" title="Ingredients" data-bs-trigger="focus" data-bs-content="Rice, Water, Yeast, and Sugar">+info</button>
+                <button class="btn btn-outline-dark btn-sm ml-2 order-btn" data-bs-toggle="modal" data-bs-target="#orderModal" data-dish="Makgeolli">Order</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <img src="/image/Sakhe.png" class="card-img-top" alt="Sikhye">
+            <div class="card-body">
+                <h5 class="card-title">Sikhye</h5>
+                <p class="card-text">Sweet traditional Korean drink made with malted barley and rice.</p>
+                <p><span class="badge bg-primary">₩3,500</span></p>
+                <button class="btn btn-outline-dark btn-sm ml-2" data-bs-toggle="popover" title="Ingredients" data-bs-trigger="focus" data-bs-content="Malted Barley, Rice, Sugar, Water">+info</button>
+                <button class="btn btn-outline-dark btn-sm ml-2 order-btn" data-bs-toggle="modal" data-bs-target="#orderModal" data-dish="Sikhye">Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="orderModalLabel">Item Added to Cart</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="orderModalText">Your item has been added to the cart.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="/cart" class="btn btn-primary">Go to Cart</a>
+            </div>
+        </div>
+    </div>
+</div>
+
         
 
 <!-- Appetizers Section -->
@@ -134,8 +154,8 @@
                 <h5 class="card-title">Kimchi</h5>
                 <p class="card-text">Fermented vegetables (usually napa cabbage) with chili pepper and garlic.</p>
                 <p><span class="badge bg-primary">₩3,000</span></p>
-                <button class="btn btn-outline-dark btn-sm ml-2">+info</button>
-                <button class="btn btn-outline-dark btn-sm ml-2">Order</button>
+                <button class="btn btn-outline-dark btn-sm ml-2" data-bs-toggle="popover" title="Ingredient" data-bs-trigger="focus" data-bs-content="napa cabbage, chili pepper, garlic, fish sauce">+info</button>
+                <button class="btn btn-outline-dark btn-sm ml-2 order-btn" data-bs-toggle="modal" data-bs-target="#orderModal" data-dish="Kimchi">Order</button>
             </div>
         </div>
     </div>
@@ -146,8 +166,8 @@
                 <h5 class="card-title">Haemul Pajeon</h5>
                 <p class="card-text">Savory seafood pancake with green onions and a crispy batter.</p>
                 <p><span class="badge bg-primary">₩6,000</span></p>
-                <button class="btn btn-outline-dark btn-sm ml-2">+info</button>
-                <button class="btn btn-outline-dark btn-sm ml-2">Order</button>
+                <button class="btn btn-outline-dark btn-sm ml-2" data-bs-toggle="popover" title="Ingredient" data-bs-trigger="focus" data-bs-content="seafood, green onions, flour, sesame oil">+info</button>
+                <button class="btn btn-outline-dark btn-sm ml-2 order-btn" data-bs-toggle="modal" data-bs-target="#orderModal" data-dish="Haemul Pajeon">Order</button>
             </div>
         </div>
     </div>
@@ -158,12 +178,32 @@
                 <h5 class="card-title">Tteokbokki</h5>
                 <p class="card-text">Spicy stir-fried rice cakes with fish cakes in a sweet chili sauce.</p>
                 <p><span class="badge bg-primary">₩4,500</span></p>
-                <button class="btn btn-outline-dark btn-sm ml-2">+info</button>
-                <button class="btn btn-outline-dark btn-sm ml-2">Order</button>
+                <button class="btn btn-outline-dark btn-sm ml-2" data-bs-toggle="popover" title="Ingredient" data-bs-trigger="focus" data-bs-content="rice cakes, fish cakes, gochujang (Korean chili paste), fish sauce, sugar, scallions">+info</button>
+                <button class="btn btn-outline-dark btn-sm ml-2 order-btn" data-bs-toggle="modal" data-bs-target="#orderModal" data-dish="Tteokbokki">Order</button>
             </div>
         </div>
     </div>
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="orderModalLabel">Item Added to Cart</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="orderModalText">Your item has been added to the cart.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="/cart" class="btn btn-primary">Go to Cart</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <!-- Main Dishes Section -->
 <h3 class="text-center mb-4">Main Dishes</h3>
@@ -175,8 +215,8 @@
                 <h5 class="card-title">Bulgogi</h5>
                 <p class="card-text">Grilled marinated beef served with rice and side dishes.</p>
                 <p><span class="badge bg-primary">₩12,000</span></p>
-                <button class="btn btn-outline-dark btn-sm ml-2  " data-bs-toggle="popover" title="Ingredients" data-bs-content="Rice, Beef, Onion, Soy Sauce, Sesame Oil, Garlic, and more">+info</button>
-                <button class="btn btn-outline-dark btn-sm ml-2">Order</button>
+                <button class="btn btn-outline-dark btn-sm ml-2" data-bs-toggle="popover" title="Ingredients" data-bs-trigger="focus" data-bs-content="Rice, Beef, Onion, Soy Sauce, Sesame Oil, Garlic, and more">+info</button>
+                <button class="btn btn-outline-dark btn-sm ml-2 order-btn" data-bs-toggle="modal" data-bs-target="#orderModal" data-dish="Bulgogi">Order</button>
             </div>
         </div>
     </div>
@@ -185,26 +225,46 @@
             <img src="/image/Bimbimbap.jpg" class="card-img-top" alt="Bibimbap">
             <div class="card-body">
                 <h5 class="card-title">Bibimbap</h5>
-                <p class="card-text">Mixed rice dish with vegetables, meat, and gochujang sauce.</p>
-                <p><span class="badge bg-primary">₩10,000</span></p>
-                <button class="btn btn-outline-dark btn-sm ml-2">+info</button>
-                <button class="btn btn-outline-dark btn-sm ml-2">Order</button>
+                <p class="card-text">A mixed rice dish with vegetables, egg, and chili paste.</p>
+                <p><span class="badge bg-primary">₩8,000</span></p>
+                <button class="btn btn-outline-dark btn-sm ml-2" data-bs-toggle="popover" title="Ingredients" data-bs-trigger="focus" data-bs-content="Rice, Spinach, Bean Sprouts, Carrots, Mushrooms, Egg, Gochujang (Korean Chili Paste)">+info</button>
+                <button class="btn btn-outline-dark btn-sm ml-2 order-btn" data-bs-toggle="modal" data-bs-target="#orderModal" data-dish="Bibimbap">Order</button>
             </div>
         </div>
     </div>
     <div class="col-md-4">
         <div class="card mb-4">
-            <img src="/image/Kimchi main.jpg" class="card-img-top" alt="Kimchi Stew">
+            <img src="/image/Kimchi main.jpg" class="card-img-top" alt="Kimchi">
             <div class="card-body">
-                <h5 class="card-title">Kimchi Stew</h5>
-                <p class="card-text">A spicy and flavorful stew made with fermented kimchi, tofu, and vegetables.</p>
-                <p><span class="badge bg-primary">₩8,000</span></p>
-                <button class="btn btn-outline-dark btn-sm ml-2">+info</button>
-                <button class="btn btn-outline-dark btn-sm ml-2">Order</button>
+                <h5 class="card-title">Kimchi</h5>
+                <p class="card-text">Fermented vegetables (usually napa cabbage) with chili pepper and garlic.</p>
+                <p><span class="badge bg-primary">₩3,000</span></p>
+                <button class="btn btn-outline-dark btn-sm ml-2" data-bs-toggle="popover" title="Ingredients" data-bs-trigger="focus" data-bs-content="Napa Cabbage, Chili Pepper, Garlic, Ginger, Fish Sauce, Salt">+info</button>
+                <button class="btn btn-outline-dark btn-sm ml-2 order-btn" data-bs-toggle="modal" data-bs-target="#orderModal" data-dish="Kimchi">Order</button>
             </div>
         </div>
     </div>
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="orderModalLabel">Item Added to Cart</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="orderModalText">Your item has been added to the cart.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="/cart" class="btn btn-primary">Go to Cart</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 <!-- Desserts Section -->
@@ -212,12 +272,13 @@
 <div class="row">
     <div class="col-md-4">
         <div class="card mb-4">
-            <img src="/image/Bingsu.png" class="card-img-top" alt="Bingsu">
+            <img src="/image/patbingsu.png" class="card-img-top" alt="Patbingsu">
             <div class="card-body">
-                <h5 class="card-title">Bingsu</h5>
-                <p class="card-text">Shaved ice dessert topped with sweet red beans, fruits, and condensed milk.</p>
-                <p><span class="badge bg-primary">₩6,500</span></p>
-                <button class="btn btn-outline-dark btn-sm ml-2">+info</button>
+                <h5 class="card-title">Patbingsu</h5>
+                <p class="card-text">Korean shaved ice dessert topped with sweetened red beans, rice cakes, and condensed milk.</p>
+                <p><span class="badge bg-primary">₩5,500</span></p>
+                <button class="btn btn-outline-dark btn-sm ml-2" data-bs-toggle="popover" title="Ingredient" data-bs-trigger="focus" data-bs-content="Shaved Ice, Red Beans, Rice Cakes, Condensed Milk, Fruit">+info</button>
+                <button class="btn btn-outline-dark btn-sm ml-2 order-btn" data-bs-toggle="modal" data-bs-target="#orderModal" data-dish="Patbingsu">Order</button>
             </div>
         </div>
     </div>
@@ -226,24 +287,46 @@
             <img src="/image/Haettok.png" class="card-img-top" alt="Hotteok">
             <div class="card-body">
                 <h5 class="card-title">Hotteok</h5>
-                <p class="card-text">Fried pancake filled with brown sugar, cinnamon, and nuts.</p>
-                <p><span class="badge bg-primary">₩3,000</span></p>
-                <button class="btn btn-outline-dark btn-sm ml-2">+info</button>
+                <p class="card-text">Korean filled pancakes typically served during the winter, with a sweet syrup filling.</p>
+                <p><span class="badge bg-primary">₩3,500</span></p>
+                <button class="btn btn-outline-dark btn-sm ml-2" data-bs-toggle="popover" title="Ingredient" data-bs-trigger="focus" data-bs-content="Flour, Brown Sugar, Cinnamon, Peanuts, Sesame Seeds">+info</button>
+                <button class="btn btn-outline-dark btn-sm ml-2 order-btn" data-bs-toggle="modal" data-bs-target="#orderModal" data-dish="Hotteok">Order</button>
             </div>
         </div>
     </div>
     <div class="col-md-4">
         <div class="card mb-4">
-            <img src="/image/patbingsu.png" class="card-img-top" alt="Patbingsu">
+            <img src="/image/Bingsu.png" class="card-img-top" alt="Bingsu">
             <div class="card-body">
-                <h5 class="card-title">Patbingsu</h5>
-                <p class="card-text">Sweet red bean topped shaved ice with fruits, condensed milk, and chewy rice cakes.</p>
-                <p><span class="badge bg-primary">₩7,000</span></p>
-                <button class="btn btn-outline-dark btn-sm ml-2">+info</button>
+                <h5 class="card-title">Bingsu</h5>
+                <p class="card-text">Shaved ice dessert with a variety of toppings, including fruits, sweet red beans, and condensed milk.</p>
+                <p><span class="badge bg-primary">₩4,500</span></p>
+                <button class="btn btn-outline-dark btn-sm ml-2" data-bs-toggle="popover" title="Ingredient" data-bs-trigger="focus" data-bs-content="Shaved Ice, Sweet Red Beans, Fruits, Condensed Milk, Sweet Syrup">+info</button>
+                <button class="btn btn-outline-dark btn-sm ml-2 order-btn" data-bs-toggle="modal" data-bs-target="#orderModal" data-dish="Bingsu">Order</button>
             </div>
         </div>
     </div>
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="orderModalLabel">Item Added to Cart</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="orderModalText">Your item has been added to the cart.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="/cart" class="btn btn-primary">Go to Cart</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 
@@ -305,6 +388,16 @@
       var popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
     });
   </script>
+
+  <script>
+    document.querySelectorAll('.order-btn').forEach(button => {
+        button.addEventListener('click', function () {
+            const dishName = this.getAttribute('data-dish');
+            document.getElementById('orderModalText').textContent = `The dish "${dishName}" has been added to your cart.`;
+        });
+    });
+</script>
+
     
 
 </body>
